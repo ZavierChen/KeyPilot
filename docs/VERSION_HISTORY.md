@@ -82,6 +82,7 @@
 | 2026-09-18 | `repro-2026.09.18.1` | 将说明改为面向所有使用者的独立项目文档；测试与复现说明统一为 `docs/TESTING.md`，同步入口及相关文档措辞。 | [提交 341a160](https://github.com/ZavierChen/KeyPilot/commit/341a1608c086ed077b6d582b543bd60637ddf951) |
 | 2026-09-18 | `repro-2026.09.18.2` | 补充[项目简介](PROJECT_OVERVIEW.md)、起始动机、使用场景和逐步功能演进，使读者能从最初问题追溯到当前系统。 | [发布记录与对应源码](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.2) |
 | 2026-09-18 | `repro-2026.09.18.3` | 明确“替代 Copilot 键，再做一个 Windows 版 Siri”的起始动机与低成本优势；增加[亮点与同类方案对比](DIFFERENTIATION.md)及待执行实验；合并早期源码与可复现版的历史、文档和发布入口，统一维护于 `KeyPilot`。 | [发布记录与对应源码](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.3) |
+| 2026-09-18 | `repro-2026.09.18.4` | 增加[发展方向与前景](ROADMAP.md)：成熟 App、免手动环境配置、模型选择、短样本声音与云端辅助制作、跨品牌体验和合作设想；约 3 美元标为未验证成本目标，未来能力与现有实现分开记录。 | [发布记录与对应源码](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.4) |
 
 ## 关键纠错记录
 

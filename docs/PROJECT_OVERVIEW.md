@@ -1,6 +1,6 @@
 # KeyPilot：制作动机、功能与演进
 
-[项目首页](../README.md) · [亮点与对比](DIFFERENTIATION.md) · [安装运行](START_HERE.md) · [逐版本记录](VERSION_HISTORY.md) · [历史来源](HISTORY_SOURCES.md)
+[项目首页](../README.md) · [亮点与对比](DIFFERENTIATION.md) · [发展方向](ROADMAP.md) · [安装运行](START_HERE.md) · [逐版本记录](VERSION_HISTORY.md) · [历史来源](HISTORY_SOURCES.md)
 
 KeyPilot 最初想替代 Copilot 键原来的用途，随后以“做一个 Windows 版 Siri”为目标，逐步发展成桌面语音助手。它把常用电脑操作做成明确的 Skill，用规则处理直接命令，用可替换的本地模型补充语言理解，再按需接入问答、外部助手和语音合成。
 
@@ -147,6 +147,8 @@ CPU ZipVoice 播报前会按中文上下文处理数字、日期、时间和百�
 
 首版公开后，`.1` 统一了通用项目文档与测试指南；`.2` 补齐制作动机、当前功能和本页的开发过程；`.3` 明确起始目标与低成本优势，增加[亮点、痛点与同类方案对比](DIFFERENTIATION.md)，并将早期 `KeyPilot` 与可复现版统一到同一项目。它们属于公开源码与文档整理版本，没有把应用核心另行标成 `v0.24`。
 
+`.4` 补充作者的发展规划：降低部署门槛，做成成熟 App，加入一键模型选择与声音制作体验，并探索面向不同品牌和自配电脑的合作方式。规划内容在[路线图](ROADMAP.md)中单独标注，不列为当前已实现功能。
+
 ## 项目的主要价值
 
 **首要优势是低持续成本。** 日常基础操作由本机完成，本地模型与本地声音可以独立使用，基础使用无需购买云端 API 额度。已有电脑上的这类使用可以不增加云端推理或合成的按次费用；硬件、电力和存储仍有成本，可选第三方服务则按各自条件使用。具体路径见[成本说明](DIFFERENTIATION.md#1-低持续成本常用功能无需付费云端-api)。
@@ -160,7 +162,7 @@ CPU ZipVoice 播报前会按中文上下文处理数字、日期、时间和百�
 | 版本范围 | 当前记录 |
 | --- | --- |
 | 应用源码 | 仍标记 `0.23.0`，包含后续修复；具体内容以 Git 提交为准 |
-| 公开源码包 | `repro-2026.09.18.3`；可在 [Releases](https://github.com/ZavierChen/KeyPilot/releases) 下载 |
+| 公开源码包 | `repro-2026.09.18.4`；可在 [Releases](https://github.com/ZavierChen/KeyPilot/releases) 下载 |
 | 历史声音实验 | v1–v7；最终本机选择中 v6 / 英 v7，不作为公开附带资源 |
 | 标准语音包格式 | ZipVoice CPU v1；使用者按规范准备自己的资源 |
 

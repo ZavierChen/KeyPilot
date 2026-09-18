@@ -8,6 +8,8 @@
 
 项目解决的具体痛点、工程亮点及与同类方案的差异见 [亮点与对比](DIFFERENTIATION.md)。
 
+成熟 App、一键模型部署、声音定制与跨品牌体验的后续目标见 [发展方向与前景](ROADMAP.md)。当前安装方法仍以下文为准。
+
 ## 1. 准备并安装
 
 需要 Windows 10/11、64 位 CPython 3.12（安装时包括 Tcl/Tk）、PowerShell 5.1 或更新版本。首次安装依赖需要网络。当前验证环境为 Windows、CPython 3.12.14；其他 Python 版本不作为此次验收基准。
@@ -51,6 +53,7 @@ py -3.12 -m venv .venv
 | --- | --- | --- |
 | 了解项目与功能 | 仓库/GitHub 文档 | [动机、功能与开发过程](PROJECT_OVERVIEW.md) |
 | 了解优势与适用范围 | 项目对比说明 | [亮点、痛点与同类方案](DIFFERENTIATION.md) |
+| 了解下一步发展 | 项目路线图 | [近期目标与长期前景](ROADMAP.md) |
 | 接自己的本地模型 | 本地模型门户 | [协议、发现、路由检查](LOCAL_MODELS.md) |
 | 让不了解项目的模型接入 | 阅读或安装接入 Skill | [SKILL.md](../skills/keypilot-model-adapter/SKILL.md) |
 | 加自己的本地音色 | 自定义语音包导入 | [规范与导入步骤](VOICE_PACKS.md) |
