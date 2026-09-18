@@ -4,7 +4,7 @@ Windows 桌面助手研究项目：文字/系统听写 → 规则与本地模型
 
 [公开源码](https://github.com/ZavierChen/KeyPilot-Repro) · [下载发布包](https://github.com/ZavierChen/KeyPilot-Repro/releases) · [Windows 自动验证](https://github.com/ZavierChen/KeyPilot-Repro/actions/workflows/test.yml)
 
-**第一次使用请从 [项目入口](docs/START_HERE.md) 开始。给教授展示请看 [复现与演示指南](docs/PROFESSOR_GUIDE.md)。**
+**第一次使用请从 [项目入口](docs/START_HERE.md) 开始。验证功能与复现实验请看 [测试与复现指南](docs/TESTING.md)。**
 
 | 入口 | 内容 |
 | --- | --- |
@@ -50,7 +50,7 @@ powershell -NoProfile -ExecutionPolicy Bypass -File scripts/setup.ps1
 .\.venv\Scripts\python.exe scripts/build_share.py
 ```
 
-产物是 `dist/KeyPilot-Repro-source.zip`。不包含 `.env`、API Key、私人录音、模型权重、会话记忆、原始聊天导出、实验工作目录或虚拟环境。发布包附 SHA-256，可从上面的 GitHub Releases 入口下载或直接发给教授。
+产物是 `dist/KeyPilot-Repro-source.zip`。不包含 `.env`、API Key、私人录音、模型权重、会话记忆、原始聊天导出、实验工作目录或虚拟环境。发布包附 SHA-256，可从上面的 GitHub Releases 入口下载。
 
 **语音包仅在本地使用，不上传或随项目分发。** 项目中的 `examples/voice-pack/voice.json` 只是无音频、无权重、不可直接发声的格式模板。其他人按规范在自己的电脑准备和导入自己的声音资源。
 

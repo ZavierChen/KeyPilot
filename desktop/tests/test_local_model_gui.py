@@ -34,7 +34,7 @@ class LocalModelPortalGuiTests(unittest.TestCase):
                 widgets = list(descendants(window))
                 combos = [widget for widget in widgets if widget.winfo_class() == "TCombobox"]
                 combos[0].set("openai-compatible")
-                combos[1].set("professor-custom-model")
+                combos[1].set("custom-local-model")
                 combos[2].set("prompt")
                 entries = [widget for widget in widgets if widget.winfo_class() == "TEntry"]
                 entries[0].delete(0, "end")
@@ -42,7 +42,7 @@ class LocalModelPortalGuiTests(unittest.TestCase):
                 buttons = {widget.cget("text"): widget for widget in widgets if widget.winfo_class() == "TButton"}
                 buttons["保存并启用"].invoke()
                 stored = json.loads(app.settings_path.read_text(encoding="utf-8"))
-                self.assertEqual(stored["local_model"]["model"], "professor-custom-model")
+                self.assertEqual(stored["local_model"]["model"], "custom-local-model")
                 self.assertEqual(stored["local_model"]["protocol"], "openai-compatible")
                 self.assertEqual(app.ollama.config.json_mode, "prompt")
                 buttons["预览契约"].invoke()

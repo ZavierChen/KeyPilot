@@ -1,4 +1,4 @@
-"""Read-only command-line entry point for model adapters and professor demos."""
+"""Read-only command-line entry point for model adapters and routing tests."""
 from __future__ import annotations
 
 import argparse
