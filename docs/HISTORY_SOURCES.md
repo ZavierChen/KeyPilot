@@ -21,7 +21,8 @@
 | H11 | `voice-model-upgrade-v5/训练报告-v5.md`、`voice-model-bilingual-v6/训练与评测报告.md`、`voice-model-english-v7-seam-fix/更新说明.md`；对应数据摘要 | 情感语料、双语筛选/划分、v5/v6 盲听、v7 英文修复与播放衔接；最终组合由 H03 确认 | 不把客观分数改善等同于自然度改善；目标训练句不作泛化证据 |
 | H12 | 已安装应用 `docs/voice-update-persistence.md`、`docs/voice-restart-root-cause.md`（2026-09-08/09） | 原子保存、稳定 ID、固定布局、不同启动进程的数据路径差异与桌面冷启动验证 | 9 月 8 日的持久化改进本身不能证明已消除重定向；9 月 9 日明确没有整机重启 |
 | H13 | 公开仓库 [KeyPilot](https://github.com/ZavierChen/KeyPilot)（可复现版原名 `KeyPilot-Repro`）的 [3c2d543](https://github.com/ZavierChen/KeyPilot/commit/3c2d543228c1bc82419ba60c5caa9f83be6752ab)、[341a160](https://github.com/ZavierChen/KeyPilot/commit/341a1608c086ed077b6d582b543bd60637ddf951) 与 [`.2` 发布记录](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.2)，2026-09-18 | 首次公开可复现项目、`.1` 通用文档与 `TESTING.md` 整理、`.2` [项目简介](PROJECT_OVERVIEW.md)及动机/功能演进补充 | 公开分发内容由对应提交和发布标签定位；应用 `v0.x` 与声音 `v1–v7` 分别解释，不从文档修订推断功能或音质提升 |
-| H14 | 作者于 2026-09-18 补充的产品发展目标；[路线图](ROADMAP.md)逐项列出的官方资料 | 成熟 App、降低环境配置门槛、本地/API 模型选择、声音制作成本目标、跨品牌 Windows 体验与未来合作方向 | 作者目标与第三方已公布事实分别记录；约 3 美元未经完整成本核算，未实施的新功能与未建立的合作不列为成果 |
+| H14 | 作者于 2026-09-18 补充的产品发展目标；[路线图](ROADMAP.md)逐项列出的官方资料 | 成熟 App、英文版与中英切换、降低环境配置门槛、本地/API 模型选择、声音制作成本目标、跨品牌 Windows 体验与未来合作方向 | 作者目标与第三方已公布事实分别记录；约 3 美元未经完整成本核算，英文适配是否需要训练须另测，未实施的新功能与未建立的合作不列为成果 |
+| H15 | 作者于 2026-09-18 对起始体验的澄清 | 没有实际用过 Copilot；本机虽有 Copilot 键，按下却只打开搜索；希望做能直接帮用户操作电脑的 Windows 助手 | 按键行为是作者实际观察，原因未核实；“更像聊天机器人”属于个人印象，不能写成 Copilot 不具备操作能力的评测结论，也不能推断本机确定不支持它 |
 
 后续公开修订 `repro-2026.09.18.3` 补充了[亮点与同类方案对比](DIFFERENTIATION.md)。该文逐项链接 2026-09-18 核对的官方资料，并为主要仓库使用固定提交快照；这是定位研究，不是新功能发布或已完成的竞品性能评测。对应内容见[发布记录](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.3)。
 
