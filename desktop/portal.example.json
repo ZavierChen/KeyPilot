@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "default": "local_assistant",
+  "children": {
+    "local_assistant": {
+      "name": "本地助手",
+      "description": "KeyPilot 研究复现版",
+      "action": {
+        "type": "show_local_app",
+        "title_prefix": "KeyPilot 研究复现版",
+        "program": "pythonw.exe",
+        "args": ["-m", "keypilot.assistant_app"],
+        "working_directory": "."
+      }
+    }
+  }
+}

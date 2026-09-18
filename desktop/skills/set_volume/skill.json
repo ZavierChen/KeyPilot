@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "set_volume",
+  "name": "设置音量",
+  "description": "读取、设置、增减或静音系统主音量；数值会被限制在 0 到 100。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "operation": {"type": "string", "enum": ["get", "set", "up", "down", "mute", "unmute"]},
+      "percent": {"type": "integer", "minimum": 0, "maximum": 100}
+    },
+    "required": ["operation"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "音量调到百分之三十", "call": {"operation": "set", "percent": 30}},
+    {"utterance": "静音", "call": {"operation": "mute"}}
+  ],
+  "executor": "windows.set_master_volume"
+}

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "open_settings",
+  "name": "打开或搜索 Windows 设置",
+  "description": "优先打开明确的 Windows 设置页面；没有专用页面时自动填写设置搜索框。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "topic": {"type": "string"},
+      "query": {"type": "string"}
+    },
+    "required": ["topic", "query"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "打开蓝牙设置", "call": {"topic": "bluetooth", "query": "蓝牙"}},
+    {"utterance": "在设置里找颜色管理", "call": {"topic": "search", "query": "颜色管理"}}
+  ],
+  "executor": "windows.open_or_search_settings"
+}

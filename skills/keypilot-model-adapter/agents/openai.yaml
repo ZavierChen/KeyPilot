@@ -1,0 +1,4 @@
+interface:
+  display_name: "KeyPilot 模型转接"
+  short_description: "接入本地推理服务，导出并验证 KeyPilot 已注册操作的结构化调用"
+  default_prompt: "使用 $keypilot-model-adapter，把这个本地模型接入 KeyPilot，导出操作契约并验证受限动作 JSON。"

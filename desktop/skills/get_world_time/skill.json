@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "id": "get_world_time",
+  "name": "查询世界时间",
+  "description": "离线查询常见城市或时区的当前日期和时间。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {"location": {"type": "string"}},
+    "required": ["location"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "东京现在几点", "call": {"location": "东京"}},
+    {"utterance": "芝加哥当前时间", "call": {"location": "芝加哥"}}
+  ],
+  "executor": "local.world_time"
+}

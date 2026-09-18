@@ -1,0 +1,25 @@
+name: Reproduce on Windows
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  windows:
+    runs-on: windows-latest
+    env:
+      PYTHONUTF8: '1'
+      KEYPILOT_DATA_DIR: '${{ github.workspace }}\data\ci'
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: requirements/repro-windows-py312.lock
+      - run: python -m pip install -r requirements/repro-windows-py312.lock
+      - run: python -m pip install --no-deps --no-build-isolation -e .
+      - run: python scripts/keypilot.py doctor
+      - run: python -m pytest -q
+      - run: python scripts/keypilot.py gui --smoke-test
+      - run: python scripts/build_share.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: KeyPilot-Repro-source
+          path: dist/KeyPilot-Repro-source.zip*

@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "set_brightness",
+  "name": "控制屏幕亮度",
+  "description": "读取或设置笔记本内置屏幕亮度，也支持按固定步长增减。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "operation": {"type": "string", "enum": ["get", "set", "up", "down"]},
+      "percent": {"type": "integer", "minimum": 0, "maximum": 100},
+      "step": {"type": "integer", "minimum": 1, "maximum": 50}
+    },
+    "required": ["operation"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "屏幕亮度调到百分之六十", "call": {"operation": "set", "percent": 60}},
+    {"utterance": "屏幕暗一点", "call": {"operation": "down", "step": 10}}
+  ],
+  "executor": "windows.control_brightness"
+}

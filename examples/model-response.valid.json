@@ -1,0 +1,5 @@
+{
+  "matched": true,
+  "skill_id": "set_volume",
+  "arguments": {"operation": "set", "percent": 50}
+}

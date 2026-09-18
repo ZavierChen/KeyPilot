@@ -1,0 +1,7 @@
+# Optional, separate CPython 3.12 x64 environment. Not desktop app dependencies.
+# Public package versions; run the importer to verify your runtime and weights.
+sherpa-onnx==1.13.8
+numpy==2.2.6
+soundfile==0.13.1
+cffi==1.17.1
+pycparser==2.22

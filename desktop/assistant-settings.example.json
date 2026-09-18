@@ -1,0 +1,17 @@
+{
+  "web_mode": 0,
+  "web_answer": false,
+  "complex_agent": "关闭",
+  "codex": false,
+  "ollama": true,
+  "speak": false,
+  "auto_low_risk": false,
+  "custom_voice_pack": "关闭",
+  "custom_voice_pack_id": "",
+  "reply_length": "中",
+  "local_model": {
+    "protocol": "ollama",
+    "endpoint": "http://127.0.0.1:11434",
+    "model": ""
+  }
+}

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "volcengine-voice-assistant-prototype"
+version = "0.1.0"
+description = "KeyPilot research workspace: reproducible Windows assistant and optional voice training tools"
+requires-python = ">=3.10"
+dependencies = [
+  "python-dotenv>=1.0,<2",
+  "requests>=2.31,<3",
+  "sounddevice>=0.5,<1",
+  "websockets>=14,<16",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8,<9"]
+desktop = ["edge-tts==7.2.8", "tzdata>=2025.2"]
+analysis = [
+  "librosa>=0.11,<1",
+  "numpy>=2,<3",
+  "praat-parselmouth>=0.4.6,<1",
+  "soundfile>=0.13,<1",
+]
+emotion-analysis = [
+  "funasr==1.4.14",
+  "modelscope>=1.39,<2",
+  "opensmile>=2.6,<3",
+]
+
+[project.scripts]
+voice-assistant = "voice_assistant.cli:main"
+voice-dataset = "voice_assistant.cloud_teacher_dataset:main"
+voice-params = "voice_assistant.voice_analysis:main"
+voice-emotion-analysis = "voice_assistant.emotion_analysis:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src", "desktop"]
+testpaths = ["tests", "desktop/tests"]
+addopts = "--import-mode=importlib"

@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "id": "get_weather",
+  "name": "查询天气",
+  "description": "免 API Key 查询当前位置或指定城市的今天、明天天气。未指定城市时按公网 IP 推测位置。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "location": {"type": "string"},
+      "day": {"type": "string", "enum": ["today", "tomorrow"]}
+    },
+    "required": ["location", "day"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "今天天气怎么样", "call": {"location": "", "day": "today"}},
+    {"utterance": "上海明天天气", "call": {"location": "上海", "day": "tomorrow"}}
+  ],
+  "executor": "network.wttr_weather"
+}

@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "id": "my-voice",
+  "name": "我的自定义音色",
+  "engine": "zipvoice",
+  "ready": false,
+  "synthetic_voice": true,
+  "model": "model",
+  "vocoder": "vocos_24khz.onnx",
+  "reference_audio": "reference.wav",
+  "reference_text": "请替换为参考录音中实际说出的文字。",
+  "num_steps": 4,
+  "num_threads": 2
+}
