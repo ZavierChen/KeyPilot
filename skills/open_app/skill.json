@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "open_app",
+  "name": "打开应用",
+  "description": "按用户说出的应用名称，从明确的白名单中启动一个 Windows 应用。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "app": {
+        "type": "string"
+      }
+    },
+    "required": ["app"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "打开 GPT", "call": {"app": "chatgpt"}},
+    {"utterance": "帮我开一下计算器", "call": {"app": "calculator"}}
+  ],
+  "executor": "windows.open_start_menu_app"
+}

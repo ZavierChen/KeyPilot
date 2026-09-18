@@ -1,0 +1,33 @@
+# Python caches and test output
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Local environments and editor state
+.venv/
+venv/
+.idea/
+.vscode/
+*.user
+
+# KeyPilot runtime state and secrets
+cloud-api-key.dat
+chat-handoff.json
+marvis-handoff.json
+handoff-state.json
+time-tasks.json
+website-shortcuts.json
+path-shortcuts.json
+*.tmp
+*.log
+
+# Build and packaging artifacts
+build/
+dist/
+*.zip
+
+# Windows noise
+Thumbs.db
+Desktop.ini

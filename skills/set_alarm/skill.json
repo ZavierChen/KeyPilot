@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "set_alarm",
+  "name": "设置闹钟",
+  "description": "设置未来七天内的持久闹钟；关闭窗口或重新登录后仍由 KeyPilot 后台处理。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "hour": {"type": "integer", "minimum": 0, "maximum": 23},
+      "minute": {"type": "integer", "minimum": 0, "maximum": 59},
+      "day_offset": {"type": "integer", "minimum": 0, "maximum": 7},
+      "label": {"type": "string"}
+    },
+    "required": ["hour", "minute", "day_offset", "label"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "明早七点叫我起床", "call": {"hour": 7, "minute": 0, "day_offset": 1, "label": "起床"}}
+  ],
+  "executor": "local.persistent_alarm"
+}

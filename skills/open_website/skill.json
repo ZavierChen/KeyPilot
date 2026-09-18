@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "id": "open_website",
+  "name": "打开网站或浏览器搜索",
+  "description": "用默认浏览器打开常用网站、明确的 http/https 网址，或使用 Google 搜索。找不到本地应用后的搜索仍需用户确认。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "mode": {"type": "string", "enum": ["site", "url", "search"]},
+      "target": {"type": "string"}
+    },
+    "required": ["mode", "target"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "打开 YouTube", "call": {"mode": "site", "target": "youtube"}},
+    {"utterance": "打开 example.com", "call": {"mode": "url", "target": "example.com"}},
+    {"utterance": "在浏览器搜索量子计算", "call": {"mode": "search", "target": "量子计算"}}
+  ],
+  "executor": "browser.open_safe_url"
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": 1,
+  "id": "set_reminder",
+  "name": "设置提醒或日历事件",
+  "description": "创建未来七天内的本地持久提醒，或生成带提醒的标准日历事件并打开日历确认导入。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "hour": {"type": "integer", "minimum": 0, "maximum": 23},
+      "minute": {"type": "integer", "minimum": 0, "maximum": 59},
+      "day_offset": {"type": "integer", "minimum": 0, "maximum": 7},
+      "label": {"type": "string"},
+      "calendar": {"type": "boolean"}
+    },
+    "required": ["hour", "minute", "day_offset", "label", "calendar"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "周五下午三点提醒我交作业", "call": {"hour": 15, "minute": 0, "day_offset": 1, "label": "交作业", "calendar": false}},
+    {"utterance": "在日历添加明天下午三点开会", "call": {"hour": 15, "minute": 0, "day_offset": 1, "label": "开会", "calendar": true}}
+  ],
+  "executor": "local.persistent_reminder_or_ics"
+}

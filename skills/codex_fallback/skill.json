@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "id": "codex_fallback",
+  "name": "Codex 兜底理解",
+  "description": "仅当本地 Skill 无法理解请求时调用 Codex，并限制为回答、设置搜索或不支持三种结构化结果。",
+  "risk": "medium",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "utterance": {"type": "string"}
+    },
+    "required": ["utterance"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "为什么电脑风扇突然很响", "call": {"utterance": "为什么电脑风扇突然很响"}}
+  ],
+  "executor": "codex.read_only_structured_fallback"
+}

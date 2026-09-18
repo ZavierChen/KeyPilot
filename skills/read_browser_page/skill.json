@@ -1,0 +1,21 @@
+{
+  "schema_version": 1,
+  "id": "read_browser_page",
+  "name": "读取浏览器页面",
+  "description": "读取当前浏览器已渲染的可见文本，并用本地模型总结或回答；不会读取后台页面。",
+  "risk": "low",
+  "confirmation": "never",
+  "input_schema": {
+    "type": "object",
+    "properties": {
+      "question": {"type": "string"}
+    },
+    "required": ["question"],
+    "additionalProperties": false
+  },
+  "examples": [
+    {"utterance": "总结当前网页", "call": {"question": "请总结当前网页"}},
+    {"utterance": "浏览器页面讲了什么", "call": {"question": "浏览器页面讲了什么"}}
+  ],
+  "executor": "local.browser_rendered_text_to_qwen"
+}

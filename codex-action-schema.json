@@ -1,0 +1,17 @@
+{
+  "type": "object",
+  "properties": {
+    "action": {
+      "type": "string",
+      "enum": ["settings_search", "speak", "unsupported"]
+    },
+    "response": {
+      "type": "string"
+    },
+    "query": {
+      "type": "string"
+    }
+  },
+  "required": ["action", "response", "query"],
+  "additionalProperties": false
+}
