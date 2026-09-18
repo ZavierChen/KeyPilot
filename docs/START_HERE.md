@@ -57,6 +57,7 @@ py -3.12 -m venv .venv
 | 接自己的本地模型 | 本地模型门户 | [协议、发现、路由检查](LOCAL_MODELS.md) |
 | 让不了解项目的模型接入 | 阅读或安装接入 Skill | [SKILL.md](../skills/keypilot-model-adapter/SKILL.md) |
 | 加自己的本地音色 | 自定义语音包导入 | [规范与导入步骤](VOICE_PACKS.md) |
+| 选择声音制作路线 | 个性化语音子项目 | [GPU / CPU / 云端方案与成本](VOICE_PROJECT.md) |
 | 了解实验和版本取舍 | 版本迭代记录 | [完整时间线](VERSION_HISTORY.md) |
 | 测试功能与复现实验 | 测试与复现指南 | [测试步骤与记录格式](TESTING.md) |
 
