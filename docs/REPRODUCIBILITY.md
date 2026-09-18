@@ -33,7 +33,7 @@
 - 可移植公开权重加自有参考录音的实际合成、音质、播放设备兼容性。本次没有用私人参考录音进行这项验收。
 - 真实 Windows 听写、亮度/音量设备、Copilot 硬件键与开机常驻行为。
 - 云端 TTS、Google 页面读取、外部桌面代理与第三方 API 的在线行为。
-- GitHub Actions 的实际运行状态见 [Windows 自动验证](https://github.com/ZavierChen/KeyPilot-Repro/actions/workflows/test.yml)；本页的本地验收与每个提交的 CI 结果分别记录。
+- GitHub Actions 的实际运行状态见 [Windows 自动验证](https://github.com/ZavierChen/KeyPilot/actions/workflows/test.yml)；本页的本地验收与每个提交的 CI 结果分别记录。
 
 历史性能数字与版本取舍见 [VERSION_HISTORY.md](VERSION_HISTORY.md)，其证据和本次验收明确分开。可以公开复现软件接口和验证流程，不能据此宣称已重现所有历史声音实验。
 

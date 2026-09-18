@@ -2,7 +2,11 @@
 
 这份源码包可以在另一台 Windows 电脑重建应用，不要求复制开发者的 Python、D 盘、用户配置或私人模型。
 
+项目统一维护于 [KeyPilot](https://github.com/ZavierChen/KeyPilot)。原 `KeyPilot-Repro` 的可复现源码、文档和发布记录已归入同一项目；源码包与隔离数据目录仍保留 `KeyPilot-Repro` 名称，避免与现有安装的个人数据混用。
+
 想先了解项目为什么制作、现在有哪些功能，以及如何一步步发展到当前版本，请看 [项目动机、功能与演进](PROJECT_OVERVIEW.md)。
+
+项目解决的具体痛点、工程亮点及与同类方案的差异见 [亮点与对比](DIFFERENTIATION.md)。
 
 ## 1. 准备并安装
 
@@ -46,6 +50,7 @@ py -3.12 -m venv .venv
 | 要做的事 | 软件/命令入口 | 说明 |
 | --- | --- | --- |
 | 了解项目与功能 | 仓库/GitHub 文档 | [动机、功能与开发过程](PROJECT_OVERVIEW.md) |
+| 了解优势与适用范围 | 项目对比说明 | [亮点、痛点与同类方案](DIFFERENTIATION.md) |
 | 接自己的本地模型 | 本地模型门户 | [协议、发现、路由检查](LOCAL_MODELS.md) |
 | 让不了解项目的模型接入 | 阅读或安装接入 Skill | [SKILL.md](../skills/keypilot-model-adapter/SKILL.md) |
 | 加自己的本地音色 | 自定义语音包导入 | [规范与导入步骤](VOICE_PACKS.md) |

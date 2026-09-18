@@ -20,7 +20,15 @@
 | H10 | `voice-model-upgrade-v4/训练报告.md`；历史 `train-zipvoice-expanded.ps1` | v3-125 → 扩大数据 → v4-400；v4-500 回退；ONNX INT8 与 4/8/16 步 CPU 实测 | 六句盲测与单句 CPU 基准样本有限；报告原件保留本地 |
 | H11 | `voice-model-upgrade-v5/训练报告-v5.md`、`voice-model-bilingual-v6/训练与评测报告.md`、`voice-model-english-v7-seam-fix/更新说明.md`；对应数据摘要 | 情感语料、双语筛选/划分、v5/v6 盲听、v7 英文修复与播放衔接；最终组合由 H03 确认 | 不把客观分数改善等同于自然度改善；目标训练句不作泛化证据 |
 | H12 | 已安装应用 `docs/voice-update-persistence.md`、`docs/voice-restart-root-cause.md`（2026-09-08/09） | 原子保存、稳定 ID、固定布局、不同启动进程的数据路径差异与桌面冷启动验证 | 9 月 8 日的持久化改进本身不能证明已消除重定向；9 月 9 日明确没有整机重启 |
-| H13 | 公开仓库 [KeyPilot-Repro](https://github.com/ZavierChen/KeyPilot-Repro) 的 [3c2d543](https://github.com/ZavierChen/KeyPilot-Repro/commit/3c2d543228c1bc82419ba60c5caa9f83be6752ab)、[341a160](https://github.com/ZavierChen/KeyPilot-Repro/commit/341a1608c086ed077b6d582b543bd60637ddf951) 与 [`.2` 发布记录](https://github.com/ZavierChen/KeyPilot-Repro/releases/tag/repro-2026.09.18.2)，2026-09-18 | 首次公开可复现项目、`.1` 通用文档与 `TESTING.md` 整理、`.2` [项目简介](PROJECT_OVERVIEW.md)及动机/功能演进补充 | 公开分发内容由对应提交和发布标签定位；应用 `v0.x` 与声音 `v1–v7` 分别解释，不从文档修订推断功能或音质提升 |
+| H13 | 公开仓库 [KeyPilot](https://github.com/ZavierChen/KeyPilot)（可复现版原名 `KeyPilot-Repro`）的 [3c2d543](https://github.com/ZavierChen/KeyPilot/commit/3c2d543228c1bc82419ba60c5caa9f83be6752ab)、[341a160](https://github.com/ZavierChen/KeyPilot/commit/341a1608c086ed077b6d582b543bd60637ddf951) 与 [`.2` 发布记录](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.2)，2026-09-18 | 首次公开可复现项目、`.1` 通用文档与 `TESTING.md` 整理、`.2` [项目简介](PROJECT_OVERVIEW.md)及动机/功能演进补充 | 公开分发内容由对应提交和发布标签定位；应用 `v0.x` 与声音 `v1–v7` 分别解释，不从文档修订推断功能或音质提升 |
+
+后续公开修订 `repro-2026.09.18.3` 补充了[亮点与同类方案对比](DIFFERENTIATION.md)。该文逐项链接 2026-09-18 核对的官方资料，并为主要仓库使用固定提交快照；这是定位研究，不是新功能发布或已完成的竞品性能评测。对应内容见[发布记录](https://github.com/ZavierChen/KeyPilot/releases/tag/repro-2026.09.18.3)。
+
+### 仓库合并时保留的早期源码
+
+旧 `KeyPilot` 仓库只有一个 2026-09-04 的源码提交 `378e76ffc8feb4fa1eb07d7435d143773b5bead6`，没有独立标签或 Release。合并时将其中 77 个源码、测试、文档和图标文件保存为[早期源码归档提交](https://github.com/ZavierChen/KeyPilot/commit/201db76828b2fbbf8dffe34f6c42519839ba41c4)，并纳入当前项目的 Git 历史。
+
+公开归档排除 `vendor/` 第三方安装副本，以及 `assistant-settings.json`、`config.json`、`portal.json` 三个旧运行配置；原始库保留本机镜像备份。归档提交是在合并时生成的净化快照，提交时间不冒充最初开发时间。当前分支沿用可复现版的目录与默认配置；早期源码仅用于查证演进，不是推荐安装入口。
 
 ## 报告原件校验摘要
 
